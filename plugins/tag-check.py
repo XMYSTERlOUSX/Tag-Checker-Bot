@@ -27,6 +27,16 @@ async def flt_admin(_, client, message):
     except Exception:
         pass    
 
+admin = filters.create(flt_admin)
+
+async def flt_admin2(_, client, message):
+    try:
+        user2 = await client.get_chat_member(Config.Tag_Check_Group, message.from_user.id)
+        return True if user2.status in ["members"] else False
+    except Exception:
+        pass   
+admin2 = filters.create(flt_admin2)
+
 @Client.on_message(~anonymous & ~admin & filters.group)
 async def addorno(client, message):
     firs = message.from_user.first_name
@@ -62,7 +72,7 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )        
-@Client.on_message(filters.command('start') & filters.private)
+@Client.on_message(filters.command('start') & filters.private & admin2)
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
