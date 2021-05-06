@@ -22,12 +22,18 @@ anonymous = filters.create(anon_filter)
 
 async def flt_admin(_, client, message):
     try:
-        user = await client.get_chat_member(message.chat.id, message.from_user.id)
+        user = await client.get_chat_member(message.chat.id,, message.from_user.id)
         return True if user.status in ["administrator", "creator"] else False
     except Exception:
         pass
-
-admin = filters.create(flt_admin)
+    
+async def flt_admin2(_, client, message):
+    try:
+        user = await client.get_chat_member(Config.Tag_Check_Group, message.from_user.id)
+        return True if user.status in ["members"] else False
+    except Exception:
+        pass
+admin2 = filters.create(flt_admin2)
 
 @Client.on_message(~anonymous & ~admin & filters.group)
 async def addorno(client, message):
@@ -47,8 +53,6 @@ async def addorno(client, message):
             a=0
     elif user_id == 1023936257:
         a=1
-    elif message.from_user.id in Config.SUDO_USERS:
-        a=1
     else:
         a=0
     if a == 0:
@@ -56,7 +60,7 @@ async def addorno(client, message):
         
 If you want to <b>get unmuted</b> please follow the instructions below!👇:-
 
-1. Put `⫷[ʘϾḂ]⫸`(Tap to copy) in your name.
+1. Put `{Config.Tag_Name}`(Tap to copy) in your name.
 2. After setting the tag press the below <b>Unmute Me ⚠️</b> button and press /start to the bot!
 
 If you do all the things correctly you will get unmuted instantly!""",
@@ -66,7 +70,7 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )        
-@Client.on_message(filters.command('start') & filters.private)
+@Client.on_message(filters.command('start') & filters.private & admin2)
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
@@ -80,15 +84,14 @@ async def start(client, message):
             b=1
         else:
             b=0
-    elif user_id == 1023936257:
-        b=1
     else:
         b=0
     if b == 1:
-        await client.restrict_chat_member(
-            channel, user_id, ChatPermissions(can_send_messages=True)
-        )
-        await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
+        try:
+            await client.restrict_chat_member(
+                channel, user_id, ChatPermissions(can_send_messages=True)
+            )
+            await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
     else:
         await message.reply_text(text=f"""Oh come on {message.from_user.mention}! You have still not added our group tag in your name!😡 So you are still muted😝
 
