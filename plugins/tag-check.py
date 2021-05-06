@@ -60,7 +60,6 @@ If you do all the things correctly you will get unmuted instantly!""",
         )        
 @Client.on_message(filters.command('start') & filters.private & ~admin)
 async def start(client, message):
-async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
     channel = Config.Tag_Check_Group
