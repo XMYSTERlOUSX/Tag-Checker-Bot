@@ -17,10 +17,6 @@
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
     },
-    "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space).",
-      "required": true
-    },
     "Tag_Check_Group": {
       "description": "Your Group id where you want to check user's tags(with -100 in front)",
       "value": ""
