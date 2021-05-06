@@ -37,7 +37,7 @@ async def addorno(client, message):
     user_id = message.from_user.id
     REPLY_MARKUP = InlineKeyboardMarkup([
     [InlineKeyboardButton("Unmute Me ⚠️",
-                          url={Config.Bot_url})]])
+                          url=Config.Bot_url)]])
     if Config.Tag_Name in firs:
         a=1
     elif las is not None:
