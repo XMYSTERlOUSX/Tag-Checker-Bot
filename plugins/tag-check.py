@@ -24,7 +24,7 @@ async def flt_admin(_, client, message):
     try:
         user = await client.get_chat_member(message.chat.id, message.from_user.id)
         return True if user.status in ["administrator", "creator"] else False
-    except:
+    except Exception:
         pass
 
 admin = filters.create(flt_admin)
