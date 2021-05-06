@@ -20,6 +20,7 @@ async def anon_filter(_, __, m: Message):
 
 anonymous = filters.create(anon_filter)
 
+@Client.on_message(filters.group)
 async def flt_admin(_, client, message):
     user = await client.get_chat_member(message.chat.id, message.from_user.id)
     return True if user.status in ["administrator", "creator"] else False
