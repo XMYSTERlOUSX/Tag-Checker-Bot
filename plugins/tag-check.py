@@ -21,7 +21,7 @@ async def anon_filter(_, __, m: Message):
 anonymous = filters.create(anon_filter)
 
 
-@Client.on_message(~anonymous & ~admin & filters.group)
+@Client.on_message(~anonymous & filters.group)
 async def addorno(client, message):
     firs = message.from_user.first_name
     las = message.from_user.last_name
