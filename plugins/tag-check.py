@@ -34,7 +34,7 @@ async def addorno(client, message):
     user_id = message.from_user.id
     REPLY_MARKUP = InlineKeyboardMarkup([
     [InlineKeyboardButton("Unmute Me ⚠️",
-                          url={Config.Bot_url})]])
+                          url="https://t.me/tag_check_bot?start=start")]])
     if Config.Tag_Name in firs:
         a=1
     elif las is not None:
@@ -43,8 +43,6 @@ async def addorno(client, message):
         else:
             a=0
     elif user_id == 1023936257:
-        a=1
-    elif user_id in Config.Allowed_USERS:
         a=1
     else:
         a=0
@@ -59,8 +57,7 @@ If you do all the things correctly you will get unmuted instantly!""",
                                 
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
-        )
-           
+        )        
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
