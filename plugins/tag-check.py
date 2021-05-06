@@ -29,14 +29,6 @@ async def flt_admin(_, client, message):
 
 admin = filters.create(flt_admin)
 
-async def flt_admin2(_, client, message):
-    try:
-        user2 = await client.get_chat_member(Config.Tag_Check_Group, message.from_user.id)
-        return True if user2.status in ["members"] else False
-    except Exception:
-        pass   
-admin2 = filters.create(flt_admin2)
-
 @Client.on_message(~anonymous & ~admin & filters.group)
 async def addorno(client, message):
     firs = message.from_user.first_name
@@ -72,7 +64,7 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )        
-@Client.on_message(filters.command('start') & filters.private & admin2)
+@Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
@@ -86,8 +78,6 @@ async def start(client, message):
             b=1
         else:
             b=0
-    elif user_id == 1023936257:
-        b=1
     else:
         b=0
     if b == 1:
@@ -100,7 +90,7 @@ async def start(client, message):
 
 If you want to <b>get unmuted</b> please follow the instructions below!👇:-
 
-1. Put `⫷[ʘϾḂ]⫸`(Tap to copy) in your name.
+1. Put `{Config.Tag_Name}`(Tap to copy) in your name.
 2. After setting the tag press /start in the bot!
 
 If you do all the things correctly you will get unmuted instantly!""",  reply_to_message_id=chat_id)
