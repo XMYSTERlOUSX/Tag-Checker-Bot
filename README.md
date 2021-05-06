@@ -8,7 +8,7 @@ This is a bot to check if users in a group have entered the group tag in their n
 <br>
 
 # DEPLOY TO HEROKU
-* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XMYSTERlOUSX/Tag-cChecker-Bot)
+* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XMYSTERlOUSX/Tag-Checker-Bot)
 <br><br>
 
 ## Configs
