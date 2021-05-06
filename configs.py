@@ -9,5 +9,6 @@ class Config(object):
     API_ID = int(os.getenv("API_ID"))  # from https://my.telegram.org/apps
     API_HASH = os.getenv("API_HASH")  # from https://my.telegram.org/apps
     Tag_Check_Group = os.getenv("Tag_Check_Group", None) #the group id where you want to chech user's tags
+    SUDO_USERS = list(map(int, getenv("SUDO_USERS").split())) 
 
     
