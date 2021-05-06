@@ -26,7 +26,7 @@
       "value": ""
     },
     "Bot_url": {
-      "description": "The bot's telegram link",
+      "description": "The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include '?start=start' at the end of the url!",
       "value": ""
     }
    },
