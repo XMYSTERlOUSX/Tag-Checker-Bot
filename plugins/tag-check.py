@@ -84,6 +84,8 @@ async def start(client, message):
                 channel, user_id, ChatPermissions(can_send_messages=True)
             )
             await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
+         except Exception:
+            pass
     else:
         await message.reply_text(text=f"""Oh come on {message.from_user.mention}! You have still not added our group tag in your name!😡 So you are still muted😝
 
