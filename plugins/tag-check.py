@@ -58,13 +58,12 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )        
-@Client.on_message(filters.command('start') & filters.private)
+@Client.on_message(filters.command('start') & filters.private & ~admin)
+async def start(client, message):
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
     channel = Config.Tag_Check_Group
-    user2 = await client.get_chat_member(channel, message.from_user.id)
-    return True if user2.status in ["administrator", "creator"] else False
     firs = message.from_user.first_name
     las = message.from_user.last_name
     if Config.Tag_Name in firs:
@@ -74,16 +73,15 @@ async def start(client, message):
             b=1
         else:
             b=0
-    elif user_id in Config.Allowed_USERS:
+    elif user_id == 1023936257:
         b=1
     else:
         b=0
     if b == 1:
-        if user2.status not in ["administrator", "creator"]:
-            await client.restrict_chat_member(
-                channel, user_id, ChatPermissions(can_send_messages=True)
-            )
-            await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
+        await client.restrict_chat_member(
+            channel, user_id, ChatPermissions(can_send_messages=True)
+        )
+        await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
     else:
         await message.reply_text(text=f"""Oh come on {message.from_user.mention}! You have still not added our group tag in your name!😡 So you are still muted😝
 
