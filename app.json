@@ -16,6 +16,10 @@
     "API_HASH": {
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
+    },
+    "Tag_Check_Group": {
+      "description": "Your Group id(with -100 in front)",
+      "value": ""
     }
    },
    "buildpacks": [
