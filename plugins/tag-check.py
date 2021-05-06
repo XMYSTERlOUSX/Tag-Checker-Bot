@@ -50,12 +50,9 @@ async def addorno(client, message):
         a=0
     if a == 0:
         await message.reply_text(text=f"""{message.from_user.mention} you have been muted because you have <b>not added</b> our group tag in your name!
-
 If you want to <b>get unmuted</b> please follow the instructions below!👇:-
-
-1. Put `{Config.Tag_Name}`(Tap to copy) in your name.
+1. Put `⫷[ʘϾḂ]⫸`(Tap to copy) in your name.
 2. After setting the tag press the below <b>Unmute Me ⚠️</b> button and press /start to the bot!
-
 If you do all the things correctly you will get unmuted instantly!""",
                                 quote=True,
                                 reply_markup=REPLY_MARKUP)
@@ -63,7 +60,7 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )
-
+           
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
