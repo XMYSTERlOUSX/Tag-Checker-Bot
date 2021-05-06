@@ -47,7 +47,7 @@ async def addorno(client, message):
             a=0
     elif user_id == 1023936257:
         a=1
-    elif message.from_user.id in SUDO_USERS:
+    elif message.from_user.id in Config.SUDO_USERS:
         a=1
     else:
         a=0
