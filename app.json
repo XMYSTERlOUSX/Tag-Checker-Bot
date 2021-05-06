@@ -17,8 +17,20 @@
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
     },
+    "Allowed_USERS": {
+      "description": "Allowed user's ids to be without the tag except admins.(seperate ids with space)",
+      "value": ""
+    },
     "Tag_Check_Group": {
-      "description": "Your Group id(with -100 in front)",
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "Tag_Name": {
+      "description": "The Tag name you want to set for checking",
+      "value": ""
+    },
+    "Bot_url": {
+      "description": "The bot's telegram link",
       "value": ""
     }
    },
