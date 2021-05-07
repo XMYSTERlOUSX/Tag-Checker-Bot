@@ -17,19 +17,51 @@
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
     },
-    "Tag_Check_Group": {
+    "Group1_name": {
       "description": "Your Group id where you want to check user's tags(with -100 in front)",
       "value": ""
     },
-    "group1_name": {
+    "Group2_name": {
       "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "Group3_name": {
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "unmute_command_1": {
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "unmute_command_2": {
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "unmute_command_3": {
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
+    "Group1_id": {
+      "description": "The Tag name you want to set for checking",
+      "value": ""
+    },
+    "Group2_id": {
+      "description": "The Tag name you want to set for checking",
+      "value": ""
+    },
+    "Group3_id": {
+      "description": "The Tag name you want to set for checking",
+      "value": ""
+    },
+    "Bot_url": {
+      "description": "The Tag name you want to set for checking",
       "value": ""
     },
     "Tag_Name": {
       "description": "The Tag name you want to set for checking",
       "value": ""
     },
-    "Bot_url": {
+    "Log_Group": {
       "description": "The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include '?start=start' at the end of the url!",
       "value": ""
     }
