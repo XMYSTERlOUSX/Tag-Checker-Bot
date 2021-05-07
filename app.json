@@ -21,6 +21,10 @@
       "description": "Your Group id where you want to check user's tags(with -100 in front)",
       "value": ""
     },
+    "group1_name": {
+      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "value": ""
+    },
     "Tag_Name": {
       "description": "The Tag name you want to set for checking",
       "value": ""
