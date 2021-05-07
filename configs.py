@@ -20,5 +20,6 @@ class Config(object):
     Group2_id = os.getenv("Group2_id", None)
     Group3_id = os.getenv("Group3_id", None)
     Log_Group = os.getenv("Log_Group", None)
+    START_MSG = os.getenv("START_MSG", None)
 
     
