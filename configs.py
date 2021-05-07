@@ -8,9 +8,17 @@ class Config(object):
     BOT_TOKEN = os.getenv("BOT_TOKEN")  # from @botfather
     API_ID = int(os.getenv("API_ID"))  # from https://my.telegram.org/apps
     API_HASH = os.getenv("API_HASH")  # from https://my.telegram.org/apps
-    Tag_Check_Group = os.getenv("Tag_Check_Group", None) # Your Group id where you want to check user's tags(with -100 in front)
     Tag_Name = os.getenv("Tag_Name", None) # The Tag name you want to set for checking
     Bot_url = os.getenv("Bot_url", None) # The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include "?start=start" at the end of the url!
-    group1_name = os.getenv("group1_name", None)
+    Group1_name = os.getenv("Group1_name", None)
+    Group2_name = os.getenv("Group2_name", None)
+    Group3_name = os.getenv("Group3_name", None)
+    unmute_command_1 = os.getenv("unmute_command_1", None)
+    unmute_command_2 = os.getenv("unmute_command_2", None)
+    unmute_command_3 = os.getenv("unmute_command_3", None)
+    Group1_id = os.getenv("Group1_id", None)
+    Group2_id = os.getenv("Group2_id", None)
+    Group3_id = os.getenv("Group3_id", None)
+    Log_Group = os.getenv("Log_Group", None)
 
     
