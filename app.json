@@ -61,6 +61,10 @@
       "description": "The Tag name you want to set for checking",
       "value": ""
     },
+    "START_MSG": {
+      "description": "The Tag name you want to set for checking",
+      "value": ""
+    },
     "Log_Group": {
       "description": "The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include '?start=start' at the end of the url!",
       "value": ""
