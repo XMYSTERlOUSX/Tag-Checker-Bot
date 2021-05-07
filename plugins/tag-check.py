@@ -64,7 +64,7 @@ If you do all the things correctly you will get unmuted instantly!""",
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
         )        
-@Client.on_message(filters.command('unmute'{Config.group1_name}) & filters.private)
+@Client.on_message(filters.command({Config.group1_name}) & filters.private)
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
