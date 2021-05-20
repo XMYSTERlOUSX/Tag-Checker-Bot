@@ -18,43 +18,43 @@
       "value": ""
     },
     "Group1_name": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "Your First Group's name where you want to check user's tags.",
       "value": ""
     },
     "Group2_name": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "Your Second Group's name where you want to check user's tags.",
       "value": ""
     },
     "Group3_name": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "Your Third Group's name where you want to check user's tags.",
       "value": ""
     },
     "unmute_command_1": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "A command name to unmute users who has been muted in the first group. (write the name without the '/' symbol)",
       "value": ""
     },
     "unmute_command_2": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "A command name to unmute users who has been muted in the second group. (write the name without the '/' symbol)",
       "value": ""
     },
     "unmute_command_3": {
-      "description": "Your Group id where you want to check user's tags(with -100 in front)",
+      "description": "A command name to unmute users who has been muted in the third group. (write the name without the '/' symbol)",
       "value": ""
     },
     "Group1_id": {
-      "description": "The Tag name you want to set for checking",
+      "description": "Your First Group's id where you want to check user's tags.(must include -100 in front)",
       "value": ""
     },
     "Group2_id": {
-      "description": "The Tag name you want to set for checking",
+      "description": "Your Second Group's id where you want to check user's tags.(must include -100 in front)",
       "value": ""
     },
     "Group3_id": {
-      "description": "The Tag name you want to set for checking",
+      "description": "Your Third Group's id where you want to check user's tags.(must include -100 in front)",
       "value": ""
     },
     "Bot_url": {
-      "description": "The Tag name you want to set for checking",
+      "description": "The bot's telegram link. Ex:-https://t.me/your_bot?start=start  Note:- Include '?start=start' at the end of the url!",
       "value": ""
     },
     "Tag_Name": {
@@ -62,11 +62,11 @@
       "value": ""
     },
     "START_MSG": {
-      "description": "The Tag name you want to set for checking",
+      "description": "Enter the message you want to get displayed when users press /start",
       "value": ""
     },
-    "Log_Group": {
-      "description": "The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include '?start=start' at the end of the url!",
+    "Log_Group_id": {
+      "description": "Make a log group to save the details of who has been unmuted. Input the group id here.(must include -100 in front)!",
       "value": ""
     }
    },
