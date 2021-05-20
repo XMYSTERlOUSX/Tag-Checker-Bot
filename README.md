@@ -3,7 +3,7 @@ This is a bot to check if users in a group have entered the group tag in their n
 
 Note :- <b> The code of a highly customized version of this bot to check 3 groups at once, is included in the "MULTI GROUP CHECK" branch in this repo!</b>
   
-<p align="center">Created with ❤️ by [@xmysteriousx](https://t.me/xmysteriousx).</p>
+Created with ❤️ by [@xmysteriousx](https://t.me/xmysteriousx).
 <p align="center"><a href="https://t.me/rezoth_tm"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
 
 Please Be kind to star and fork this repo!✨😇
