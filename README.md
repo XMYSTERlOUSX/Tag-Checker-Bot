@@ -1,7 +1,7 @@
 # Tag-Checket-Bot
 This is a bot to check if users in a group have entered the group tag in their names! If the user hasn't included the group tag in their name the bot will mute the user until they enter the tag and if they have entered the tag the users will be able to unmute theirselves automatically!
 
-Note :- <b> The code of a highly customized version of this bot to check 3 groups at once, is included in the "MULTI GROUP CHECK" branch in this repo!
+Note :- <b> The code of a highly customized version of this bot to check 3 groups at once, is included in the "MULTI GROUP CHECK" branch in this repo!</b>
   
 <p align="center">Created with ❤️ by [@xmysteriousx](https://t.me/xmysteriousx).</p>
 <p align="center"><a href="https://t.me/rezoth_tm"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
