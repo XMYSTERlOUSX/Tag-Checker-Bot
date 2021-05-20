@@ -2,20 +2,18 @@
 This is a bot to check if users in a group have entered the group tag in their names! Created with ❤️ by [@xmysteriousx](https://t.me/xmysteriousx).
 <p align="center"><a href="https://t.me/rezoth_tm"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
 
-
-* ###  A demo bot can be found at **[@tag_check_bot](https://t.me/tag_check_bot)**
-
 <br>
 
-# DEPLOY TO HEROKU
+## DEPLOY TO HEROKU
 * [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XMYSTERlOUSX/Tag-Checker-Bot)
 <br><br>
 
-## Configs
+### Configs
 - `API_ID` - Get This Value from [my.telegram.org](my.telegram.org)
 - `API_HASH` - Get This Value from [my.telegram.org](my.telegram.org)
 - `Tag_Check_Group` - The group id where you want to check user's tags.
 - `Tag_Name` - The Tag name you want to set for checking.
+- `Log_Group_id` - Make a log group to save the details of who has been unmuted. Input the group id here.
 - `Bot_url` - The bot's telegram link. Ex:-https://t.me/your_bot?start=start Note:- Include "?start=start" at the end of the url!
 
 ### Credits
@@ -24,7 +22,7 @@ This is a bot to check if users in a group have entered the group tag in their n
 
 <i>Special thanks for</i> - [HANKUR](https://github.com/eXtizi)
 
-[Dan] for pyrogram
+[Dan](https://github.com/delivrance) for [pyrogram](https://github.com/Pyrogram)
 
 ### CONTRIBUTIONS AND SUGGESTIONS ARE WELCOME !!!
-Contact me on Telegram [@xmysteriousx](https://t.me/xmysteriousx).
+<a href="https://t.me/xmysteriousx"><img src="https://img.shields.io/badge/Telegram-Contact%20%40xmysteriousx-red.svg?logo=telegram"></a>
