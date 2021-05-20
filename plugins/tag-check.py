@@ -99,7 +99,7 @@ async def unmute1(client, message):
             )
             await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself in {Config.Group1_name}</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
             await message._client.send_message(
-            chat_id=Config.Log_Group,
+            chat_id=Config.Log_Group_id,
             text=f"""👇 Below user is unmuted successfully-
 <b>User</b> - {message.from_user.mention}
 <b>User First Name</b> - {message.from_user.first_name}
@@ -147,7 +147,7 @@ async def unmute2(client, message):
             )
             await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself in {Config.Group2_name}</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
             await message._client.send_message(
-            chat_id=Config.Log_Group,
+            chat_id=Config.Log_Group_id,
             text=f"""👇 Below user is unmuted successfully-
 <b>User</b> - {message.from_user.mention}
 <b>User First Name</b> - {message.from_user.first_name}
@@ -195,7 +195,7 @@ async def unmute3(client, message):
             )
             await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself in {Config.Group3_name}</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
             await message._client.send_message(
-            chat_id=Config.Log_Group,
+            chat_id=Config.Log_Group_id,
             text=f"""👇 Below user is unmuted successfully-
 <b>User</b> - {message.from_user.mention}
 <b>User First Name</b> - {message.from_user.first_name}
