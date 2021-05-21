@@ -9,11 +9,11 @@ Created with ❤️ by [@xmysteriousx](https://t.me/xmysteriousx).
 Please Be kind to star and fork this repo!✨😇
 <br>
 
-# DEPLOY TO HEROKU
-* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XMYSTERlOUSX/Tag-Checker-Bot/tree/XMYSTERlOUSX-multi)
+## DEPLOY TO HEROKU
+* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XMYSTERlOUSX/Tag-Checker-Bot/tree/MULTI-GROUP-CHECK)
 <br><br>
 
-## Configs
+### Configs
 - `API_ID` - Get This Value from [my.telegram.org](my.telegram.org)
 - `API_HASH` - Get This Value from [my.telegram.org](my.telegram.org)
 - `BOT_TOKEN ` - From @botfather
@@ -31,13 +31,13 @@ Please Be kind to star and fork this repo!✨😇
 - `Log_Group_id` - Make a log group to save the details of who has been unmuted. Input the group id here.(must include -100 in front)
 - `START_MSG` - Enter the message you want to get displayed when users press /start
 
-### Credits
+#### Credits
 
 <b>Project written and created by</b> - [XMYSTERIOUSX](https://github.com/XMYSTERlOUSX)
 
 <i>Special thanks for</i> - [HANKUR](https://github.com/eXtizi)
 
-[Dan] for pyrogram
+[Dan](https://github.com/delivrance) for [pyrogram](https://github.com/Pyrogram)
 
 ### CONTRIBUTIONS AND SUGGESTIONS ARE WELCOME !!!
-Contact me on Telegram [@xmysteriousx](https://t.me/xmysteriousx).
+<a href="https://t.me/xmysteriousx"><img src="https://img.shields.io/badge/Telegram-Contact%20%40xmysteriousx-red.svg?logo=telegram"></a>
