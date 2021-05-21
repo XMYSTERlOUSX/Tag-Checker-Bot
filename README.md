@@ -1,5 +1,5 @@
 # Tag-Checker-Bot
-This is a bot to check if users in a group have entered the group tag in their names! If the user hasn't included the group tag in their name the bot will mute the user until they enter the tag and if they have entered the tag the users will be able to unmute theirselves automatically!
+This is a bot to check if users in a group have entered the group tag in their names! If the user hasn't included the group tag in their name the bot will mute the user until they enter the tag and if they have entered the tag the users will be able to unmute themselves automatically!
 
 Note :- <b> The code of a highly customized version of this bot to check 3 groups at once, is included in the "MULTI-GROUP-CHECK" branch in this repo!</b>
   
