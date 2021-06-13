@@ -33,6 +33,7 @@ admin = filters.create(flt_admin)
 async def addorno(client, message):
     firs = message.from_user.first_name
     las = message.from_user.last_name
+    channel = Config.Tag_Check_Group
     chat_id = message.chat.id
     user_id = message.from_user.id
     REPLY_MARKUP = InlineKeyboardMarkup([
