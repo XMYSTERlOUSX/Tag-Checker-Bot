@@ -51,27 +51,24 @@ async def addorno(client, message):
     else:
         a=0
     if a == 0:
-        try:
-            await client.restrict_chat_member(
-                channel, user_id, ChatPermissions(can_send_messages=True)
-            )
-        except BaseException as be:
-            await message.reply_text(text=f"""I think I don't have perimission of restricting members in this chat! So I couldn't mute {message.from_user.mention} here!🤷‍♀ Please give me all permissions!""")
-            return
         await message.reply_text(text=f"""{message.from_user.mention} you have been muted because you have <b>not added</b> our group tag in your name!
         
 If you want to <b>get unmuted</b> please follow the instructions below!👇:-
 
 1. Put `{Config.Tag_Name}`(Tap to copy) in your name.
-2. After setting the tag press the below <b>Unmute Me ⚠️</b> button!
+2. After setting the tag press the below <b>Unmute Me ⚠️</b> button and press /start to the bot!
 
 If you do all the things correctly you will get unmuted instantly!""",
                                 quote=True,
                                 reply_markup=REPLY_MARKUP)
+                                
+        await client.restrict_chat_member(
+            chat_id, user_id, ChatPermissions(can_send_messages=False)
+        )   
                                        
 @Client.on_callback_query(filters.regex("unmute_(.*)"))
 async def unmute(client, cb):
-    chat_id = cb.chat.id
+    chat_id = cb.message.chat.id
     user_id = cb.from_user.id
     channel = Config.Tag_Check_Group
     firs = cb.from_user.first_name
