@@ -25,8 +25,6 @@ Please Be kind to star and fork this repo!✨😇
 
 <b>Project written and created by</b> - [XMYSTERIOUSX](https://github.com/XMYSTERlOUSX)
 
-<i>Special thanks for</i> - [HANKUR](https://github.com/eXtizi)
-
 [Dan](https://github.com/delivrance) for [pyrogram](https://github.com/Pyrogram)
 
 ### CONTRIBUTIONS AND SUGGESTIONS ARE WELCOME !!!
