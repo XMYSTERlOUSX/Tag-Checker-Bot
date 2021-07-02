@@ -33,12 +33,11 @@ admin = filters.create(flt_admin)
 async def addorno(client, message):
     firs = message.from_user.first_name
     las = message.from_user.last_name
-    channel = Config.Tag_Check_Group
     chat_id = message.chat.id
     user_id = message.from_user.id
     REPLY_MARKUP = InlineKeyboardMarkup([
     [InlineKeyboardButton("Unmute Me ⚠️",
-                          callback_data=f"unmute_{user_id}")]])
+                          url=Config.Bot_url)]])
     if Config.Tag_Name in firs:
         a=1
     elif las is not None:
@@ -64,15 +63,14 @@ If you do all the things correctly you will get unmuted instantly!""",
                                 
         await client.restrict_chat_member(
             chat_id, user_id, ChatPermissions(can_send_messages=False)
-        )   
-                                       
-@Client.on_callback_query(filters.regex("unmute_(.*)"))
-async def unmute(client, cb):
-    chat_id = cb.message.chat.id
-    user_id = cb.from_user.id
+        )        
+@Client.on_message(filters.command('start') & filters.private)
+async def start(client, message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id
     channel = Config.Tag_Check_Group
-    firs = cb.from_user.first_name
-    las = cb.from_user.last_name
+    firs = message.from_user.first_name
+    las = message.from_user.last_name
     if Config.Tag_Name in firs:
         b=1
     elif las is not None:
@@ -82,32 +80,28 @@ async def unmute(client, cb):
             b=0
     else:
         b=0
-    user = cb.matches[0].group(1)
-    if cb.from_user.id != user:
-        await cb.answer("This Button is not for you⚠️ Please do not press this again! You haven't even been unmuted so you can already talk freely!", show_alert=True)
-        return
     if b == 1:
         try:
             await client.restrict_chat_member(
-                channel, user, ChatPermissions(can_send_messages=True)
+                channel, user_id, ChatPermissions(can_send_messages=True)
             )
-            await cb.answer("You have unmuted yourself successfully!")
-            await message.delete()
-            await client.send_message(
+            await message.reply_text(text=f"""{message.from_user.mention}, You have <b>unmuted yourself</b> successfully!\nNow you can chat in our group as much as you want🥳""", reply_to_message_id=chat_id)
+            await message._client.send_message(
             chat_id=Config.Log_Group_id,
             text=f"""👇 Below user is unmuted successfully-
-<b>User</b> - {cb.from_user.mention}
-<b>User First Name</b> - {cb.from_user.first_name}
-<b>User Last Name</b> - {cb.from_user.last_name}
-<b>User id</b> - `{cb.from_user.id}`"""
+<b>User</b> - {message.from_user.mention}
+<b>User First Name</b> - {message.from_user.first_name}
+<b>User Last Name</b> - {message.from_user.last_name}
+<b>User id</b> - `{message.chat.id}`"""
 )
         except Exception:
             pass
     else:
-        await cb.answer("You have still not added our group tag in your name!😡", show_alert=True)
-        
-        
-        
-        
-        
-        
+        await message.reply_text(text=f"""Oh come on {message.from_user.mention}! You have still not added our group tag in your name!😡 So you are still muted😝
+
+If you want to <b>get unmuted</b> please follow the instructions below!👇:-
+
+1. Put `{Config.Tag_Name}`(Tap to copy) in your name.
+2. After setting the tag press /start in the bot!
+
+If you do all the things correctly you will get unmuted instantly!""",  reply_to_message_id=chat_id)
